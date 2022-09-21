@@ -10,7 +10,7 @@ from pydantic import BaseModel
 from StockCalculations import calculate_return
 from FastAPIApp import app
 
-nest_asyncio.apply()
+# nest_asyncio.apply()
 
 
 # TODO: Create Pydantic models for the request and response, 
@@ -49,4 +49,4 @@ async def main(req: func.HttpRequest, context: func.Context) -> func.HttpRespons
 
 if __name__ == "__main__":
     logging.info("Starting server")
-    uvicorn.run(app, host="0.0.0.0", port=8484)
+    uvicorn.run(app, host="0.0.0.0", port=5000)
